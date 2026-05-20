@@ -398,6 +398,10 @@ body::after {
   line-height: 1;
 }
 
+.manifesto + .marquee {
+  border-top: none;
+}
+
 .marquee__track {
   display: flex;
   gap: 2.5rem;
@@ -431,7 +435,7 @@ body::after {
 .manifesto {
   background: var(--maroon);
   color: var(--cream);
-  padding: var(--pad-y) var(--pad-x) 0;
+  padding: 0 var(--pad-x) 0;
 }
 
 .manifesto__top {
@@ -445,11 +449,6 @@ body::after {
   overflow: hidden;
 }
 
-@media (min-width: 1201px) {
-  .manifesto__top {
-    margin-top: calc(-1 * var(--pad-y));
-  }
-}
 
 .manifesto__top-bg {
   position: absolute;
