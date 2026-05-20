@@ -447,7 +447,7 @@ body::after {
    =========================================================== */
 .manifesto {
   background: var(--maroon);
-  color: var(--cream);
+  color: #fff;
   padding: 0 var(--pad-x) 0;
 }
 
@@ -511,7 +511,7 @@ body::after {
 .manifesto__top-body p {
   font-size: clamp(1rem, 1.6vw, 1.3rem);
   line-height: 1.75;
-  color: rgba(247, 226, 208, 0.75);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .manifesto__headline {
@@ -955,6 +955,13 @@ body::after {
   font-family: var(--ff-sans);
 }
 
+.hint--mobile { display: none; }
+
+@media (hover: none) {
+  .hint--desktop { display: none; }
+  .hint--mobile  { display: inline; }
+}
+
 /* Label "click" dentro del tooltip */
 .menu-tooltip__hint {
   position: absolute;
@@ -1158,6 +1165,7 @@ body::after {
   .nav__burger { display: flex; }
 
   .manifesto__top    { min-height: 70vh; }
+  .manifesto__headline { margin-top: 2rem; }
   .manifesto__body   { grid-template-columns: 1fr; gap: 2.5rem; }
   .manifesto__strip  { grid-template-columns: 1fr; gap: 2rem; }
   .manifesto__tagline { text-align: left !important; }
@@ -1433,4 +1441,16 @@ body::after {
   gap: 1.25rem;
   padding: 2rem 2.5rem 2.5rem;
   flex: 1;
+}
+
+@media (hover: none) {
+  .menu-card {
+    width: 92vw;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+  .menu-card.is-open {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
