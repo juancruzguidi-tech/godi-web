@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería — Godi · Pasta é calle</title>
+  <meta name="description" content="Fatto in casa. La galería de Godi — pasta fresca ogni giorno, Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__brand">
+      <img src="assets/GODI- LOGO (8).png" alt="Godi" class="nav__logo-img">
+    </a>
+    <div class="nav__links">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#menu">Menú</a>
+      <a href="galeria.html" class="nav__link--active">Galería</a>
+      <a href="index.html#eventos">Eventos</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+    </div>
+    <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__ig">@godi.calle</a>
+    <button class="nav__burger" aria-label="Abrir menú" id="navBurger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile" id="navMobile" aria-hidden="true">
+    <button class="nav__mobile-close" id="navClose" aria-label="Cerrar menú">✕</button>
+    <a href="index.html#nosotros" class="nav__mobile-link">Nosotros</a>
+    <a href="index.html#menu" class="nav__mobile-link">Menú</a>
+    <a href="galeria.html" class="nav__mobile-link">Galería</a>
+    <a href="index.html#eventos" class="nav__mobile-link">Eventos</a>
+    <a href="index.html#ubicacion" class="nav__mobile-link">Ubicación</a>
+    <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__mobile-link nav__mobile-ig">@godi.calle</a>
+  </div>
+
+  <!-- GALERÍA HEADER -->
+  <header class="galeria-page__header">
+    <span class="label label--muted">— Fatto in casa</span>
+    <h1 class="galeria-page__title">Así<br>hacemos<br><em class="script">la pasta.</em></h1>
+  </header>
+
+  <!-- FATTO IN CASA -->
+  <section class="fatto">
+<div class="fatto__columns">
+      <div class="fatto__col" data-dir="-1">
+        <div class="fatto__item">
+          <img src="assets/imagen-galeria-1.jpg" alt="Bowl de pasta Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/imagen-galeria-4.jpg" alt="Cocina Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/cartel-de-entrada-del-local.jpeg" alt="Entrada del local" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/godi-foto-alma-italiana.jpeg" alt="Alma italiana" loading="lazy">
+        </div>
+      </div>
+      <div class="fatto__col" data-dir="1">
+        <div class="fatto__item">
+          <img src="assets/imagen-galeria-2.jpg" alt="Pasta Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/imagen-galeria-5.jpeg" alt="Salsa casera Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/clientes-comiendo-en-godi.jpeg" alt="Clientes en Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/cocinero-godi.jpeg" alt="Cocinero Godi" loading="lazy">
+        </div>
+      </div>
+      <div class="fatto__col" data-dir="-1">
+        <div class="fatto__item">
+          <img src="assets/imagen-galeria-3.jpg" alt="Pasta en salsa" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/nuestros-cocineros-de-godi-2.jpeg" alt="Equipo Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/nuestros-cocineros-de-godi-3.jpeg" alt="Equipo Godi" loading="lazy">
+        </div>
+        <div class="fatto__item">
+          <img src="assets/frente-del-local-con-clientes.jpeg" alt="El local de noche" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <img src="assets/GODI- LOGO (8).png" alt="Godi" class="footer__logo">
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#menu">Menú</a>
+        <a href="galeria.html">Galería</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:godi.calle@gmail.com">Mail</a>
+        <a href="tel:+5493518629892">Teléfono</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>Caseros 329, X5022 Córdoba</p>
+      <p class="footer__copy">© 2025 Godi — Pasta é calle</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

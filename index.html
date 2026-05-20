@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Godi — Pasta é calle · Córdoba</title>
+  <meta name="description" content="La pasta que le faltaba a CBA. Trattoria al paso en Caseros 329, Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__brand">
+      <img src="assets/GODI- LOGO (8).png" alt="Godi" class="nav__logo-img">
+    </a>
+    <div class="nav__links">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#menu">Menú</a>
+      <a href="galeria.html">Galería</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#ubicacion">Ubicación</a>
+    </div>
+    <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__ig">@godi.calle</a>
+    <button class="nav__burger" aria-label="Abrir menú" id="navBurger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile" id="navMobile" aria-hidden="true">
+    <button class="nav__mobile-close" id="navClose" aria-label="Cerrar menú">✕</button>
+    <a href="#nosotros" class="nav__mobile-link">Nosotros</a>
+    <a href="#menu" class="nav__mobile-link">Menú</a>
+    <a href="galeria.html" class="nav__mobile-link">Galería</a>
+    <a href="#eventos" class="nav__mobile-link">Eventos</a>
+    <a href="#ubicacion" class="nav__mobile-link">Ubicación</a>
+    <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__mobile-link nav__mobile-ig">@godi.calle</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__media">
+      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline>
+        <source src="assets/video-hero.MOV" type="video/quicktime">
+        <source src="assets/GODI_1400x808.mp4" type="video/mp4">
+      </video>
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline>
+        <source src="assets/video-hero.MOV" type="video/quicktime">
+        <source src="assets/GODI_9-16.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img src="assets/GODI- LOGO (8).png" alt="Godi — Pasta é calle" class="hero__logo">
+      <a href="https://www.pedidosya.com.ar/restaurantes/cordoba/godi-calle-c33efb62-7534-4148-bf1c-04c3039319bc-menu?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener" class="hero__cta">Hacé tu pedido</a>
+    </div>
+    <a href="#nosotros" class="hero__scroll" aria-label="Ir al contenido">
+      <span>Bajá</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
+        <line x1="7" y1="0" x2="7" y2="16" stroke="currentColor" stroke-width="1.5"/>
+        <polyline points="1,10 7,17 13,10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <!-- copia 1 -->
+      <span>Pasta é calle</span>
+      <span class="marquee__dot">·</span>
+      <span>Córdoba</span>
+      <span class="marquee__dot">·</span>
+      <span>Trattoria al paso</span>
+      <span class="marquee__dot">·</span>
+      <span>Pastas frescas</span>
+      <span class="marquee__dot">·</span>
+      <span>Caseros 329</span>
+      <span class="marquee__dot">·</span>
+      <span>Pasta fresca ogni giorno</span>
+      <span class="marquee__dot">·</span>
+      <span>Auténtico</span>
+      <span class="marquee__dot">·</span>
+      <span>Vintage</span>
+      <span class="marquee__dot">·</span>
+      <span>Urbano</span>
+      <span class="marquee__dot">·</span>
+      <!-- copia 2 (idéntica) -->
+      <span>Pasta é calle</span>
+      <span class="marquee__dot">·</span>
+      <span>Córdoba</span>
+      <span class="marquee__dot">·</span>
+      <span>Trattoria al paso</span>
+      <span class="marquee__dot">·</span>
+      <span>Pastas frescas</span>
+      <span class="marquee__dot">·</span>
+      <span>Caseros 329</span>
+      <span class="marquee__dot">·</span>
+      <span>Pasta fresca ogni giorno</span>
+      <span class="marquee__dot">·</span>
+      <span>Auténtico</span>
+      <span class="marquee__dot">·</span>
+      <span>Vintage</span>
+      <span class="marquee__dot">·</span>
+      <span>Urbano</span>
+      <span class="marquee__dot">·</span>
+    </div>
+  </div>
+
+  <!-- MANIFESTO / NOSOTROS -->
+  <section class="manifesto" id="nosotros">
+    <div class="manifesto__top fade-in">
+      <img src="assets/pastas-al-paso-cordoba.jpeg" alt="Pastas al paso en Córdoba" class="manifesto__top-bg" loading="lazy">
+      <div class="manifesto__top-overlay"></div>
+      <div class="manifesto__top-text">
+        <span class="label label--muted">— Quiénes somos</span>
+        <h2 class="manifesto__headline">
+          La pasta que le<br>
+          faltaba a CBA<br>
+          y a tu <em class="script">giornno.</em>
+        </h2>
+        <div class="manifesto__top-body">
+          <p>
+            En Godi celebramos la simplicidad y el sabor. Ofrecemos bowls de pastas no rellenas, cocinadas al dente y combinadas con salsas caseras, <em class="manifesto__accent">listas en 5 minutos.</em>
+          </p>
+          <p>Pensado para quienes buscan una comida rica, rápida y reconfortante, nuestro formato al paso fusiona tradición italiana con ritmo urbano.</p>
+          <p>Nuestros platos se hacen con ingredientes estacionales y de calidad. Buscamos revalorizar la experiencia cálida de tradición italiana, con una vuelta de calle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO CALLE -->
+  <section class="video-duo">
+    <div class="video-duo__stage">
+      <video class="video-duo__video" autoplay muted loop playsinline>
+        <source src="assets/video-calle.MOV" type="video/quicktime">
+      </video>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="menu" id="menu">
+    <div class="menu__header fade-in">
+      <span class="label">— Lo que servimos</span>
+      <h2 class="menu__title">menú <em class="script">peatonal</em></h2>
+      <p class="menu__concept">Elegí tu pasta. Elegí tu salsa.</p>
+    </div>
+
+    <div class="menu__grid">
+      <div class="menu__category fade-in">
+        <h3 class="menu__cat-title">Las pastas</h3>
+        <div class="menu__items">
+          <div class="menu__item">Paccheri</div>
+          <div class="menu__item">Maccheroni</div>
+          <div class="menu__item">Fusilli</div>
+          <div class="menu__item">Spaccatelli</div>
+          <div class="menu__item">Fettuccine</div>
+        </div>
+      </div>
+
+      <div class="menu__category fade-in">
+        <h3 class="menu__cat-title">Las salsas</h3>
+        <p class="menu__salsa-hint">— pasá el cursor y clickeá para ver ingredientes</p>
+        <div class="menu__items">
+          <div class="menu__item" data-img="assets/bolognese-pop-up.jpg" data-desc="Ragú de carne vacuna cocido a fuego lento con tomate perita, vino tinto y sofrito de verduras. El clásico que no falla.">Bolognese</div>
+          <div class="menu__item" data-img="assets/cherry-pop-up.jpg" data-desc="Tomates cherry salteados con ajo, albahaca fresca y aceite de oliva virgen extra. Liviana y llena de carácter.">Cherry & Hierbas</div>
+          <div class="menu__item" data-img="assets/amatriciana-pop-up.jpg" data-desc="Guanciale crujiente, tomate perita, pecorino romano y un toque de peperoncino. Roma en un bowl.">Amatriciana</div>
+          <div class="menu__item" data-img="assets/pesto-pop-up.jpg" data-desc="Albahaca fresca, piñones tostados, parmesano, ajo y aceite de oliva virgen extra. El verano tiene sabor.">Pesto estate</div>
+          <div class="menu__item">Crema di mare</div>
+          <div class="menu__item" data-img="assets/zuccine.jpg" data-desc="Zucchini salteado con manteca, ralladura de limón y menta fresca. Delicada, aromática y luminosa.">Zucchini e limone</div>
+          <div class="menu__item" data-img="assets/ragu-pop-up.jpg" data-desc="Carne vacuna y cerdo cocidas lento con sofrito de verduras, hierbas y vino tinto. Intensa, reconfortante, honesta.">Ragú</div>
+          <div class="menu__item" data-img="assets/caprese-pop-up.jpg" data-desc="Tomate fresco, mozzarella, albahaca y aceite de oliva. Cuatro ingredientes, cero compromisos.">Caprese</div>
+          <div class="menu__item" data-img="assets/mediterranea-pop-up.jpg" data-desc="Aceitunas, alcaparras, tomate, ajo y aceite de oliva. Un viaje al sur de Italia en cada bocado.">Mediterranea</div>
+        </div>
+      </div>
+
+      <div class="menu__category menu__category--winter fade-in">
+        <span class="menu__winter-badge">Próximamente</span>
+        <h3 class="menu__cat-title">Menú de invierno</h3>
+        <div class="menu__items">
+          <div class="menu__item">Bolognese</div>
+          <div class="menu__item">Calapazza</div>
+          <div class="menu__item">Crema di funghi</div>
+          <div class="menu__item">Mac n cheese</div>
+          <div class="menu__item">Montanara</div>
+          <div class="menu__item">Osso</div>
+          <div class="menu__item">Rosso polpette</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu__note fade-in">
+      El menú varía según temporada. <em>Pasta fresca ogni giorno.</em>
+    </p>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="galeria" aria-label="Galería">
+    <div class="galeria__grid">
+      <div class="galeria__item galeria__item--main">
+        <img src="assets/frente-del-local-con-clientes.jpeg" alt="El local de noche lleno de gente" loading="lazy">
+      </div>
+      <div class="galeria__item">
+        <img src="assets/cacio-e-pepe-de-godi.jpeg" alt="Cacio e pepe en la rueda de queso" loading="lazy">
+      </div>
+      <div class="galeria__item">
+        <img src="assets/tiramisu-de-godi.jpeg" alt="Tiramisú de Godi" loading="lazy">
+      </div>
+      <div class="galeria__item">
+        <img src="assets/nuestros-cocineros-de-godi.jpeg" alt="La cocina de Godi" loading="lazy">
+      </div>
+      <div class="galeria__item">
+        <img src="assets/clientes-de-godi-2.jpeg" alt="Clientes en Godi" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="eventos" id="eventos">
+    <div class="eventos__header fade-in">
+      <span class="label label--muted">— Lo que pasa</span>
+      <h2 class="eventos__title"><em>Movidas</em></h2>
+    </div>
+    <div class="eventos__grid">
+      <article class="eventos__card fade-in">
+        <div class="eventos__card-img eventos__card-img--tomato">
+          <img src="assets/pop-ups-godinamicos.png" alt="GoDinamicos — Pop Ups de Godi" loading="lazy">
+        </div>
+        <div class="eventos__card-body">
+          <span class="eventos__num">01</span>
+          <h3 class="eventos__card-title">Pop Ups</h3>
+          <p>Invitamos amigos del mundo de la gastronomía a lucirse en nuestra cocina.</p>
+          <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="btn btn--outline">Ver en Instagram</a>
+        </div>
+      </article>
+      <article class="eventos__card fade-in">
+        <div class="eventos__card-img eventos__card-img--light">
+          <img src="assets/pasta-y-piano-logo.png" alt="Pasta y Piano Vol.1" loading="lazy">
+        </div>
+        <div class="eventos__card-body">
+          <span class="eventos__num">02</span>
+          <h3 class="eventos__card-title">Pasta y Piano</h3>
+          <p>Pasta, vino y música en vivo. La trattoria al paso con fondo musical. Una noche que reconforta la panza y alegra el cuore.</p>
+          <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="btn btn--outline">Ver en Instagram</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HORARIOS + MAPA -->
+  <section class="ubicacion" id="ubicacion">
+    <div class="ubicacion__info fade-in">
+      <span class="label">— Cuándo y dónde</span>
+      <h2 class="ubicacion__title">Venite<br><em class="script">a mangiare.</em></h2>
+
+      <table class="horarios">
+        <tbody>
+          <tr>
+            <td class="horarios__day">Lunes</td>
+            <td class="horarios__time">11:30–15h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Martes</td>
+            <td class="horarios__time">12–15h &nbsp;·&nbsp; 20–23h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Miércoles</td>
+            <td class="horarios__time">12–15h &nbsp;·&nbsp; 19:30–23h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Jueves</td>
+            <td class="horarios__time">12–15h &nbsp;·&nbsp; 19:30–23h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Viernes</td>
+            <td class="horarios__time">12–15h &nbsp;·&nbsp; 19:30–23h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Sábado</td>
+            <td class="horarios__time">12–15h &nbsp;·&nbsp; 19:30–23h</td>
+          </tr>
+          <tr>
+            <td class="horarios__day">Domingo</td>
+            <td class="horarios__time">20–23h</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="ubicacion__contact">
+        <a href="https://maps.google.com/?q=Caseros+329+Córdoba" target="_blank" rel="noopener">
+          Caseros 329, X5022 Córdoba
+        </a>
+        <a href="tel:+5493518629892">+54 9 3518 62-9892</a>
+        <a href="mailto:godi.calle@gmail.com">godi.calle@gmail.com</a>
+      </div>
+      <a href="https://maps.google.com/?q=Caseros+329+Córdoba" target="_blank" rel="noopener" class="ubicacion__maps-btn">
+        Cómo llegar →
+      </a>
+    </div>
+
+    <div class="ubicacion__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.894781998653!2d-64.19193402498271!3d-31.41702489628122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a30066c6e749%3A0xc760416b81a0ad4d!2zR29kaSDwn42d!5e0!3m2!1sen!2sar!4v1779288410175!5m2!1sen!2sar"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación de Godi — Caseros 329, Córdoba">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- VIDEO AMO GODI + LETRAS -->
+  <section class="video-duo">
+    <div class="video-duo__stage">
+      <video class="video-duo__video" autoplay muted loop playsinline>
+        <source src="assets/video-amo-godi.MOV" type="video/quicktime">
+      </video>
+      <img src="assets/pastas-no-buenas-godis.png" alt="Pastas no buenas, Godis" class="video-duo__text video-duo__text--high">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <img src="assets/GODI- LOGO (8).png" alt="Godi" class="footer__logo">
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:godi.calle@gmail.com">Mail</a>
+        <a href="tel:+5493518629892">Teléfono</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>Caseros 329, X5022 Córdoba</p>
+      <p class="footer__copy">© 2025 Godi — Pasta é calle</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
