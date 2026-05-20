@@ -298,6 +298,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: clamp(4rem, 8vh, 6rem);
 }
 
 .hero__media {
@@ -1140,7 +1141,7 @@ body::after {
   .nav__ig    { display: none; }
   .nav__burger { display: flex; }
 
-  .manifesto__top    { min-height: 70vh; }
+  .manifesto__top    { min-height: 70vh; margin-top: 0; }
   .manifesto__body   { grid-template-columns: 1fr; gap: 2.5rem; }
   .manifesto__strip  { grid-template-columns: 1fr; gap: 2rem; }
   .manifesto__tagline { text-align: left !important; }
@@ -1253,7 +1254,7 @@ body::after {
 }
 
 .video-duo__text--high {
-  top: 5%;
+  top: clamp(1.5rem, 8%, 5rem);
   transform: translate(-50%, 0);
 }
 
