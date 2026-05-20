@@ -220,6 +220,8 @@ body::after {
   padding: 6px;
 }
 
+.nav__burger.is-hidden { display: none !important; }
+
 .nav__burger span {
   display: block;
   width: 22px;

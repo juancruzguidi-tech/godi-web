@@ -148,6 +148,7 @@ window.addEventListener('scroll', () => {
 function openMenu() {
   mobileMenu.classList.add('open');
   backdrop.classList.add('open');
+  burger.classList.add('is-hidden');
   mobileMenu.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
@@ -155,6 +156,7 @@ function openMenu() {
 function closeMenu() {
   mobileMenu.classList.remove('open');
   backdrop.classList.remove('open');
+  burger.classList.remove('is-hidden');
   mobileMenu.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
