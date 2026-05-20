@@ -133,10 +133,11 @@ window.addEventListener('load', () => {
 });
 
 
-const nav       = document.getElementById('nav');
-const burger    = document.getElementById('navBurger');
+const nav        = document.getElementById('nav');
+const burger     = document.getElementById('navBurger');
 const mobileMenu = document.getElementById('navMobile');
-const closeBtn  = document.getElementById('navClose');
+const closeBtn   = document.getElementById('navClose');
+const backdrop   = document.getElementById('navBackdrop');
 
 /* ---- Nav: fondo al hacer scroll ---- */
 window.addEventListener('scroll', () => {
@@ -146,18 +147,21 @@ window.addEventListener('scroll', () => {
 /* ---- Menú móvil ---- */
 function openMenu() {
   mobileMenu.classList.add('open');
+  backdrop.classList.add('open');
   mobileMenu.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   mobileMenu.classList.remove('open');
+  backdrop.classList.remove('open');
   mobileMenu.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
 burger.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
+backdrop.addEventListener('click', closeMenu);
 
 mobileMenu.querySelectorAll('.nav__mobile-link').forEach(link => {
   link.addEventListener('click', closeMenu);
