@@ -96,6 +96,7 @@ Nunca usar valores hardcoded de color o fuente directamente en el CSS — siempr
 - **Clases JS**: prefijo `is-` para estados (`.is-open`, `.is-visible`). Nunca manipular estilos inline desde JS salvo posicionamiento del tooltip.
 - **No agregar comentarios** salvo que la lógica sea no obvia.
 - **No introducir dependencias nuevas** sin consultar — el proyecto es intencionalmente sin build step.
+- **No reorganizar en carpetas** (`pages/`, `public/`, etc.) — la estructura plana es intencional. Con 4 archivos de código, mover los HTML rompe todos los paths relativos y requiere configurar rewrites en Vercel. Replantear solo si el proyecto supera 10 páginas o suma un proceso de build.
 
 ---
 
