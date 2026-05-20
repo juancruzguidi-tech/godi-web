@@ -438,13 +438,17 @@ body::after {
   display: flex;
   align-items: flex-end;
   min-height: 85vh;
-  /* escapa el padding del padre para ir de borde a borde */
   margin-left:  calc(-1 * var(--pad-x));
   margin-right: calc(-1 * var(--pad-x));
-  margin-top:   calc(-1 * var(--pad-y));
   margin-bottom: 5rem;
   border-bottom: 1px solid rgba(247, 226, 208, 0.12);
   overflow: hidden;
+}
+
+@media (min-width: 1201px) {
+  .manifesto__top {
+    margin-top: calc(-1 * var(--pad-y));
+  }
 }
 
 .manifesto__top-bg {
@@ -1141,7 +1145,7 @@ body::after {
   .nav__ig    { display: none; }
   .nav__burger { display: flex; }
 
-  .manifesto__top    { min-height: 70vh; margin-top: 0; }
+  .manifesto__top    { min-height: 70vh; }
   .manifesto__body   { grid-template-columns: 1fr; gap: 2.5rem; }
   .manifesto__strip  { grid-template-columns: 1fr; gap: 2rem; }
   .manifesto__tagline { text-align: left !important; }
@@ -1254,7 +1258,7 @@ body::after {
 }
 
 .video-duo__text--high {
-  top: clamp(1.5rem, 8%, 5rem);
+  top: clamp(1.5rem, 5vh, 4rem);
   transform: translate(-50%, 0);
 }
 
