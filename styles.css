@@ -1176,7 +1176,6 @@ body::after {
 }
 
 @media (max-width: 600px) {
-  .manifesto__top   { margin-bottom: 3rem; padding-bottom: 2.5rem; }
   .manifesto__strip { padding-top: 2.5rem; }
 
   .eventos__card { padding: 1.75rem; }
