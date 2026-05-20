@@ -395,6 +395,7 @@ body::after {
   overflow: hidden;
   padding: 0.875rem 0;
   border-top: 1px solid rgba(247, 226, 208, 0.08);
+  line-height: 1;
 }
 
 .marquee__track {

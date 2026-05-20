@@ -186,13 +186,10 @@ const observer = new IntersectionObserver((entries) => {
 fadeEls.forEach(el => observer.observe(el));
 
 /* ---- Marquee: pausa al hover (solo dispositivos con puntero fino) ---- */
-const marqueeTrack = document.querySelector('.marquee__track');
-if (marqueeTrack && window.matchMedia('(hover: hover)').matches) {
-  const marqueeContainer = marqueeTrack.parentElement;
-  marqueeContainer.addEventListener('mouseenter', () => {
-    marqueeTrack.style.animationPlayState = 'paused';
-  });
-  marqueeContainer.addEventListener('mouseleave', () => {
-    marqueeTrack.style.animationPlayState = 'running';
+if (window.matchMedia('(hover: hover)').matches) {
+  document.querySelectorAll('.marquee__track').forEach(track => {
+    const container = track.parentElement;
+    container.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
+    container.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
   });
 }
