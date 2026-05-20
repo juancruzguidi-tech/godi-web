@@ -431,7 +431,7 @@ body::after {
 .manifesto {
   background: var(--maroon);
   color: var(--cream);
-  padding: var(--pad-y) var(--pad-x);
+  padding: var(--pad-y) var(--pad-x) 0;
 }
 
 .manifesto__top {
@@ -441,8 +441,7 @@ body::after {
   min-height: 85vh;
   margin-left:  calc(-1 * var(--pad-x));
   margin-right: calc(-1 * var(--pad-x));
-  margin-bottom: 5rem;
-  border-bottom: 1px solid rgba(247, 226, 208, 0.12);
+  margin-bottom: 0;
   overflow: hidden;
 }
 
