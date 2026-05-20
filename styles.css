@@ -488,7 +488,8 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  width: 760px;
+  width: 100%;
+  max-width: 760px;
 }
 
 .manifesto__top-body p {
