@@ -311,7 +311,6 @@ body::after {
   object-fit: cover;
 }
 
-.hero__video--mobile { display: none; }
 
 .hero__overlay {
   position: absolute;
@@ -1140,9 +1139,6 @@ body::after {
   .nav__links,
   .nav__ig    { display: none; }
   .nav__burger { display: flex; }
-
-  .hero__video--desktop { display: none; }
-  .hero__video--mobile  { display: block; }
 
   .manifesto__top    { min-height: 70vh; }
   .manifesto__body   { grid-template-columns: 1fr; gap: 2.5rem; }

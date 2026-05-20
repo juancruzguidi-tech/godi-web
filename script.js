@@ -185,9 +185,9 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeEls.forEach(el => observer.observe(el));
 
-/* ---- Marquee: pausa al hover ---- */
+/* ---- Marquee: pausa al hover (solo dispositivos con puntero fino) ---- */
 const marqueeTrack = document.querySelector('.marquee__track');
-if (marqueeTrack) {
+if (marqueeTrack && window.matchMedia('(hover: hover)').matches) {
   const marqueeContainer = marqueeTrack.parentElement;
   marqueeContainer.addEventListener('mouseenter', () => {
     marqueeTrack.style.animationPlayState = 'paused';
