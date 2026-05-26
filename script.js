@@ -1,5 +1,25 @@
 /* Godi — script.js */
 
+/* ---- Autoplay garantizado en mobile: llama .play() al entrar en viewport ---- */
+function initVideoAutoplay() {
+  const videos = document.querySelectorAll('video[autoplay]');
+  if (!videos.length) return;
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {});
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+
+  videos.forEach(v => obs.observe(v));
+}
+
+document.addEventListener('DOMContentLoaded', initVideoAutoplay);
+
 /* ---- Fatto in Casa — parallax + convergencia con GSAP ---- */
 function initFattoParallax() {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
