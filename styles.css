@@ -715,15 +715,16 @@ body::after {
 @media (max-width: 960px) {
   .fatto__columns {
     grid-template-columns: 1fr 1fr;
-    margin-top: -30px;
-    margin-bottom: -30px;
+    gap: 6px;
+    padding: 0 6px;
+    margin: 0;
   }
-  .fatto__col[data-dir="1"]  { transform: translateY(40px); }
-  .fatto__col[data-dir="-1"] { transform: translateY(-40px); }
+  .fatto__col {
+    display: contents;
+  }
 }
 
 @media (max-width: 600px) {
-  .fatto__columns { grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 6px; }
   .fatto__title { font-size: clamp(3rem, 15vw, 6rem); }
 }
 

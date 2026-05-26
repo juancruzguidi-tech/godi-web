@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', initVideoAutoplay);
 /* ---- Fatto in Casa — parallax + convergencia con GSAP ---- */
 function initFattoParallax() {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  if (window.innerWidth < 961) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -211,20 +212,19 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeEls.forEach(el => observer.observe(el));
 
-/* ---- Card Pasta y Piano: fade logo → video al entrar en viewport ---- */
-const cardLogo = document.querySelector('.eventos__card-logo');
-if (cardLogo) {
-  const revealCard = cardLogo.closest('.eventos__card');
-  const cardRevealObserver = new IntersectionObserver((entries) => {
+/* ---- Cards con video: fade logo → video al entrar en viewport ---- */
+document.querySelectorAll('.eventos__card-logo').forEach(logo => {
+  const card = logo.closest('.eventos__card');
+  const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => revealCard.classList.add('is-revealed'), 1500);
-        cardRevealObserver.unobserve(revealCard);
+        setTimeout(() => entry.target.classList.add('is-revealed'), 1500);
+        obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.3 });
-  cardRevealObserver.observe(revealCard);
-}
+  obs.observe(card);
+});
 
 /* ---- Marquee: pausa al hover (solo dispositivos con puntero fino) ---- */
 if (window.matchMedia('(hover: hover)').matches) {
