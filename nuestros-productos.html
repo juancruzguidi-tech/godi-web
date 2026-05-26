@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería — Godi · Pasta é calle</title>
-  <meta name="description" content="Fatto in casa. La galería de Godi — pasta fresca ogni giorno, Córdoba.">
+  <title>Nuestros Productos — Godi · Pasta é calle</title>
+  <meta name="description" content="El tiramisú de la nonna, ya en la calle. Los productos Godi para llevar. Córdoba.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +25,9 @@
     </a>
     <div class="nav__links">
       <a href="nosotros.html">Nosotros</a>
-      <a href="nuestros-productos.html">Productos</a>
+      <a href="nuestros-productos.html" class="nav__link--active">Productos</a>
       <a href="index.html#menu">Menú</a>
-      <a href="galeria.html" class="nav__link--active">Galería</a>
+      <a href="galeria.html">Galería</a>
       <a href="index.html#eventos">Eventos</a>
       <a href="index.html#ubicacion">Ubicación</a>
     </div>
@@ -38,6 +38,7 @@
   </nav>
 
   <!-- MOBILE MENU -->
+  <div class="nav__backdrop" id="navBackdrop"></div>
   <div class="nav__mobile" id="navMobile" aria-hidden="true">
     <button class="nav__mobile-close" id="navClose" aria-label="Cerrar menú">✕</button>
     <a href="nosotros.html" class="nav__mobile-link">Nosotros</a>
@@ -49,57 +50,69 @@
     <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__mobile-link nav__mobile-ig">@godi.calle</a>
   </div>
 
-  <!-- GALERÍA HEADER -->
-  <header class="galeria-page__header">
-    <span class="label label--muted">— Fatto in casa</span>
-    <h1 class="galeria-page__title">Así<br>hacemos<br><em class="script">la pasta.</em></h1>
-  </header>
+  <!-- HERO -->
+  <section class="productos-hero">
+    <video class="productos-hero__video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/hero_tiramisu.mp4" type="video/mp4">
+    </video>
+    <div class="productos-hero__overlay"></div>
+    <img
+      src="assets/tiramisu_overlay.png"
+      alt="El tiramisú de la nonna ya en la calle"
+      class="productos-hero__badge"
+    >
+  </section>
 
-  <!-- FATTO IN CASA -->
-  <section class="fatto">
-<div class="fatto__columns">
-      <div class="fatto__col" data-dir="-1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-1.jpg" alt="Bowl de pasta Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-4.jpg" alt="Cocina Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/cartel-de-entrada-del-local.jpeg" alt="Entrada del local" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/godi-foto-alma-italiana.jpeg" alt="Alma italiana" loading="lazy">
-        </div>
-      </div>
-      <div class="fatto__col" data-dir="1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-2.jpg" alt="Pasta Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-5.jpeg" alt="Salsa casera Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/clientes-comiendo-en-godi.jpeg" alt="Clientes en Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/cocinero-godi.jpeg" alt="Cocinero Godi" loading="lazy">
-        </div>
-      </div>
-      <div class="fatto__col" data-dir="-1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-3.jpg" alt="Pasta en salsa" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/nuestros-cocineros-de-godi-2.jpeg" alt="Equipo Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/nuestros-cocineros-de-godi-3.jpeg" alt="Equipo Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/frente-del-local-con-clientes.jpeg" alt="El local de noche" loading="lazy">
-        </div>
-      </div>
+  <!-- PRÓXIMAMENTE -->
+  <section class="proximamente">
+    <div class="proximamente__content fade-in">
+      <span class="label label--muted">— Lo que viene</span>
+      <h2 class="proximamente__title">Vicino<em class="script">.</em></h2>
+    </div>
+    <div class="proximamente__media fade-in">
+      <img src="assets/proximamente_tiramisu.png" alt="Próximamente — Tiramisú Godi" loading="lazy">
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Tiramisú</span>
+      <span class="marquee__dot">·</span>
+      <span>De la nonna</span>
+      <span class="marquee__dot">·</span>
+      <span>Fatto in casa</span>
+      <span class="marquee__dot">·</span>
+      <span>Mascarpone</span>
+      <span class="marquee__dot">·</span>
+      <span>Vainillas al café</span>
+      <span class="marquee__dot">·</span>
+      <span>Cacao amargo</span>
+      <span class="marquee__dot">·</span>
+      <span>Tiramisú</span>
+      <span class="marquee__dot">·</span>
+      <span>De la nonna</span>
+      <span class="marquee__dot">·</span>
+      <span>Fatto in casa</span>
+      <span class="marquee__dot">·</span>
+      <span>Mascarpone</span>
+      <span class="marquee__dot">·</span>
+      <span>Vainillas al café</span>
+      <span class="marquee__dot">·</span>
+      <span>Cacao amargo</span>
+      <span class="marquee__dot">·</span>
+    </div>
+  </div>
+
+  <!-- VIDEO NONA -->
+  <section class="nona-video">
+    <video class="nona-video__video" autoplay muted loop playsinline preload="none">
+      <source src="assets/video_nona_tiramisu.mp4" type="video/mp4">
+    </video>
+    <div class="nona-video__overlay"></div>
+    <div class="nona-video__content fade-in">
+      <span class="label label--muted">— La receta</span>
+      <p class="nona-video__text">Una receta salida de la cocina de la nonna: vainillas al café, crema suave de mascarpone y cacao amargo. Nuestro tiramisú busca ese sabor simple, casero y eterno de Italia.</p>
     </div>
   </section>
 
@@ -109,8 +122,8 @@
       <img src="assets/GODI- LOGO (8).png" alt="Godi" class="footer__logo">
       <nav class="footer__nav" aria-label="Footer">
         <a href="nosotros.html">Nosotros</a>
+        <a href="#">Productos</a>
         <a href="index.html#menu">Menú</a>
-        <a href="galeria.html">Galería</a>
         <a href="index.html#eventos">Eventos</a>
         <a href="index.html#ubicacion">Ubicación</a>
       </nav>

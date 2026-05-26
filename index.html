@@ -24,7 +24,8 @@
       <img src="assets/GODI- LOGO (8).png" alt="Godi" class="nav__logo-img">
     </a>
     <div class="nav__links">
-      <a href="#nosotros">Nosotros</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="nuestros-productos.html">Productos</a>
       <a href="#menu">Menú</a>
       <a href="galeria.html">Galería</a>
       <a href="#eventos">Eventos</a>
@@ -40,7 +41,8 @@
   <div class="nav__backdrop" id="navBackdrop"></div>
   <div class="nav__mobile" id="navMobile" aria-hidden="true">
     <button class="nav__mobile-close" id="navClose" aria-label="Cerrar menú">✕</button>
-    <a href="#nosotros" class="nav__mobile-link">Nosotros</a>
+    <a href="nosotros.html" class="nav__mobile-link">Nosotros</a>
+    <a href="nuestros-productos.html" class="nav__mobile-link">Productos</a>
     <a href="#menu" class="nav__mobile-link">Menú</a>
     <a href="galeria.html" class="nav__mobile-link">Galería</a>
     <a href="#eventos" class="nav__mobile-link">Eventos</a>
@@ -290,7 +292,10 @@
       </article>
       <article class="eventos__card fade-in">
         <div class="eventos__card-img eventos__card-img--light">
-          <img src="assets/pasta-y-piano-logo.png" alt="Pasta y Piano Vol.1" loading="lazy">
+          <video class="eventos__card-video" autoplay muted loop playsinline preload="none">
+            <source src="assets/video_card_pasta_y_piano.mp4" type="video/mp4">
+          </video>
+          <img src="assets/pasta-y-piano-logo.png" alt="Pasta y Piano Vol.1" loading="lazy" class="eventos__card-logo">
         </div>
         <div class="eventos__card-body">
           <span class="eventos__num">02</span>
@@ -382,7 +387,7 @@
     <div class="footer__top">
       <img src="assets/GODI- LOGO (8).png" alt="Godi" class="footer__logo">
       <nav class="footer__nav" aria-label="Footer">
-        <a href="#nosotros">Nosotros</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="#menu">Menú</a>
         <a href="#eventos">Eventos</a>
         <a href="#ubicacion">Ubicación</a>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería — Godi · Pasta é calle</title>
-  <meta name="description" content="Fatto in casa. La galería de Godi — pasta fresca ogni giorno, Córdoba.">
+  <title>Nosotros — Godi · Pasta é calle</title>
+  <meta name="description" content="La historia de Godi. Un lugar donde la pasta italiana se disfruta de forma rápida, moderna y auténtica. Caseros 329, Córdoba.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,10 +24,10 @@
       <img src="assets/GODI- LOGO (8).png" alt="Godi" class="nav__logo-img">
     </a>
     <div class="nav__links">
-      <a href="nosotros.html">Nosotros</a>
+      <a href="nosotros.html" class="nav__link--active">Nosotros</a>
       <a href="nuestros-productos.html">Productos</a>
       <a href="index.html#menu">Menú</a>
-      <a href="galeria.html" class="nav__link--active">Galería</a>
+      <a href="galeria.html">Galería</a>
       <a href="index.html#eventos">Eventos</a>
       <a href="index.html#ubicacion">Ubicación</a>
     </div>
@@ -38,6 +38,7 @@
   </nav>
 
   <!-- MOBILE MENU -->
+  <div class="nav__backdrop" id="navBackdrop"></div>
   <div class="nav__mobile" id="navMobile" aria-hidden="true">
     <button class="nav__mobile-close" id="navClose" aria-label="Cerrar menú">✕</button>
     <a href="nosotros.html" class="nav__mobile-link">Nosotros</a>
@@ -49,57 +50,15 @@
     <a href="https://www.instagram.com/godi.calle" target="_blank" rel="noopener" class="nav__mobile-link nav__mobile-ig">@godi.calle</a>
   </div>
 
-  <!-- GALERÍA HEADER -->
-  <header class="galeria-page__header">
-    <span class="label label--muted">— Fatto in casa</span>
-    <h1 class="galeria-page__title">Así<br>hacemos<br><em class="script">la pasta.</em></h1>
-  </header>
-
-  <!-- FATTO IN CASA -->
-  <section class="fatto">
-<div class="fatto__columns">
-      <div class="fatto__col" data-dir="-1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-1.jpg" alt="Bowl de pasta Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-4.jpg" alt="Cocina Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/cartel-de-entrada-del-local.jpeg" alt="Entrada del local" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/godi-foto-alma-italiana.jpeg" alt="Alma italiana" loading="lazy">
-        </div>
-      </div>
-      <div class="fatto__col" data-dir="1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-2.jpg" alt="Pasta Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-5.jpeg" alt="Salsa casera Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/clientes-comiendo-en-godi.jpeg" alt="Clientes en Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/cocinero-godi.jpeg" alt="Cocinero Godi" loading="lazy">
-        </div>
-      </div>
-      <div class="fatto__col" data-dir="-1">
-        <div class="fatto__item">
-          <img src="assets/imagen-galeria-3.jpg" alt="Pasta en salsa" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/nuestros-cocineros-de-godi-2.jpeg" alt="Equipo Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/nuestros-cocineros-de-godi-3.jpeg" alt="Equipo Godi" loading="lazy">
-        </div>
-        <div class="fatto__item">
-          <img src="assets/frente-del-local-con-clientes.jpeg" alt="El local de noche" loading="lazy">
-        </div>
-      </div>
+  <!-- NOSOTROS HERO -->
+  <section class="nosotros-hero">
+    <video class="nosotros-hero__video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/nuestro_equipo.mp4" type="video/mp4">
+    </video>
+    <div class="nosotros-hero__overlay"></div>
+    <div class="nosotros-hero__content">
+      <span class="label label--muted">— Nuestra historia</span>
+      <p class="nosotros-hero__text">Godi nació entre amigos, charlas eternas y una pasión compartida por la pasta italiana. Después de muchos viajes, comidas y recetas probadas, decidimos crear un lugar donde la pasta pudiera disfrutarse de una forma rápida, moderna y sin perder su esencia auténtica.</p>
     </div>
   </section>
 
@@ -108,9 +67,8 @@
     <div class="footer__top">
       <img src="assets/GODI- LOGO (8).png" alt="Godi" class="footer__logo">
       <nav class="footer__nav" aria-label="Footer">
-        <a href="nosotros.html">Nosotros</a>
+        <a href="#">Nosotros</a>
         <a href="index.html#menu">Menú</a>
-        <a href="galeria.html">Galería</a>
         <a href="index.html#eventos">Eventos</a>
         <a href="index.html#ubicacion">Ubicación</a>
       </nav>

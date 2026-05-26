@@ -191,6 +191,21 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeEls.forEach(el => observer.observe(el));
 
+/* ---- Card Pasta y Piano: fade logo → video al entrar en viewport ---- */
+const cardLogo = document.querySelector('.eventos__card-logo');
+if (cardLogo) {
+  const revealCard = cardLogo.closest('.eventos__card');
+  const cardRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => revealCard.classList.add('is-revealed'), 1500);
+        cardRevealObserver.unobserve(revealCard);
+      }
+    });
+  }, { threshold: 0.3 });
+  cardRevealObserver.observe(revealCard);
+}
+
 /* ---- Marquee: pausa al hover (solo dispositivos con puntero fino) ---- */
 if (window.matchMedia('(hover: hover)').matches) {
   document.querySelectorAll('.marquee__track').forEach(track => {
